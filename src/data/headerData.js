@@ -1,9 +1,11 @@
-import resume from '../assets/pdf/resume.pdf'
+import resume from "../assets/pdf/resume.pdf";
 
 export const headerData = {
-    name: 'Arvinth S S',
-    title: "Web Developer",
-    desciption:"There wasn't a bird in the sky, but that was not what caught her attention. It was the clouds. The deep green that isn't the color of clouds, but came with these. She knew what was coming and she hoped she was prepared. ",
-    image: 'https://raw.githubusercontent.com/PhantomScript/asset-container/main/developer-portfolio/landingImg.png',
-    resumePdf: resume
-}
+  name: "Arvinth S S",
+  title: "Web Developer",
+  desciption:
+    "Passionate job seeker with strong organizational skills eager to secure entry level Fullstack developer position ",
+  image:
+    "https://thumbs.dreamstime.com/b/profile-icon-male-avatar-portrait-casual-person-silhouette-face-flat-design-vector-46846328.jpg",
+  resumePdf: resume,
+};
