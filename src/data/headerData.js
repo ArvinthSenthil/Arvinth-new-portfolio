@@ -1,5 +1,3 @@
-import resume from "../assets/pdf/resume.pdf";
-
 export const headerData = {
   name: "Arvinth S S",
   title: "Web Developer",

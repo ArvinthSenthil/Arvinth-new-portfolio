@@ -1,12 +1,10 @@
 import React from "react";
-import ReactTooltip from "react-tooltip";
 import { makeStyles } from "@material-ui/core/styles";
 import { FaPlay, FaCode } from "react-icons/fa";
 import Fade from "react-reveal/Fade";
 
 import placeholder from "../../../assets/png/placeholder.png";
 import "./SingleProject.css";
-import { Hidden } from "@material-ui/core";
 import { Tooltip } from "@mui/material";
 
 function SingleProject({
