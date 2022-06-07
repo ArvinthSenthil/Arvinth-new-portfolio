@@ -1,12 +1,25 @@
 import React from "react";
+import ReactTooltip from "react-tooltip";
 import { makeStyles } from "@material-ui/core/styles";
 import { FaPlay, FaCode } from "react-icons/fa";
 import Fade from "react-reveal/Fade";
 
 import placeholder from "../../../assets/png/placeholder.png";
 import "./SingleProject.css";
+import { Hidden } from "@material-ui/core";
+import { Tooltip } from "@mui/material";
 
-function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
+function SingleProject({
+  id,
+  name,
+  desc,
+  tags,
+  code,
+  backend,
+  demo,
+  image,
+  theme,
+}) {
   const useStyles = makeStyles((t) => ({
     iconBtn: {
       display: "flex",
@@ -45,22 +58,40 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
           <h2 style={{ color: theme.tertiary }}>{name}</h2>
           <img src={image ? image : placeholder} alt={name} />
           <div className="project--showcaseBtn">
-            <a
-              href={demo}
-              target="_blank"
-              rel="noreferrer"
-              className={classes.iconBtn}
-            >
-              <FaPlay className={classes.icon} />
-            </a>
-            <a
-              href={code}
-              target="_blank"
-              rel="noreferrer"
-              className={classes.iconBtn}
-            >
-              <FaCode className={classes.icon} />
-            </a>
+            <Tooltip title="demo">
+              <a
+                href={demo}
+                target="_blank"
+                rel="noreferrer"
+                className={classes.iconBtn}
+              >
+                <FaPlay className={classes.icon} />
+              </a>
+            </Tooltip>
+            <Tooltip title="Frontend">
+              <a
+                href={code}
+                target="_blank"
+                rel="noreferrer"
+                className={classes.iconBtn}
+              >
+                <FaCode className={classes.icon} />
+              </a>
+            </Tooltip>
+            {backend ? (
+              <Tooltip title="Backend">
+                <a
+                  href={backend}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={classes.iconBtn}
+                >
+                  <FaCode className={classes.icon} />
+                </a>
+              </Tooltip>
+            ) : (
+              ""
+            )}
           </div>
         </div>
         <p
@@ -72,11 +103,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
         <div
           className="project--lang"
           style={{ background: theme.secondary, color: theme.tertiary80 }}
-        >
-          {tags.map((tag, id) => (
-            <span key={id}>{tag}</span>
-          ))}
-        </div>
+        ></div>
       </div>
     </Fade>
   );

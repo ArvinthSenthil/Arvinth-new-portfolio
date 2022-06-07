@@ -7,5 +7,6 @@ export const headerData = {
     "Passionate job seeker with strong organizational skills eager to secure entry level Fullstack developer position ",
   image:
     "https://thumbs.dreamstime.com/b/profile-icon-male-avatar-portrait-casual-person-silhouette-face-flat-design-vector-46846328.jpg",
-  resumePdf: resume,
+  resumePdf:
+    "https://drive.google.com/file/d/1JgndInwiUmhgcxt9V0nS7w0YvHRLVukd/view",
 };
